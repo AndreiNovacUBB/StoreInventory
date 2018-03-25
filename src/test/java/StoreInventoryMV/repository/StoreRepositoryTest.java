@@ -15,7 +15,10 @@ public class StoreRepositoryTest extends TestCase {
 	}
 
 	public void testReadFile() throws IOException {
+		System.out.println("\nT E S T   >>  Read File\n");
+
 		con.readProducts("products.txt");
+
 		ArrayList<Product> allProds = con.stockSituation();
 		assertEquals(6, allProds.size());
 		for (Product product : allProds) {
@@ -30,6 +33,8 @@ public class StoreRepositoryTest extends TestCase {
 	}
 
 	public void testAddNewProduct() throws IOException {
+		System.out.println("\nT E S T   >>  Add New Product\n");
+
 		StoreController con = new StoreController();
 		assertEquals(0, con.stockSituation().size());
 		Product product = new Product(12345, "Samsung", "Telefon", 21);
@@ -42,7 +47,9 @@ public class StoreRepositoryTest extends TestCase {
 //		System.out.println(product.toString());
 	}
 
-	public void testDisplaAllProductsByCategory() throws IOException {
+	public void testDisplayAllProductsByCategory() throws IOException {
+		System.out.println("\nT E S T   >>  Display All Products By Category\n");
+
 		con.readProducts("products.txt");
 
 		ArrayList<Product> allProds = con.stockSituation();
@@ -67,6 +74,8 @@ public class StoreRepositoryTest extends TestCase {
 	}
 
 	public void testDisplayStockForGivenProduct() throws IOException {
+		System.out.println("\nT E S T   >>  Display Stock For Given Product\n");
+
 		con.readProducts("products.txt");
 
 		ArrayList<Product> allProds = con.stockSituation();
@@ -86,6 +95,8 @@ public class StoreRepositoryTest extends TestCase {
 	}
 
 	public void testStockSituation() throws IOException {
+		System.out.println("\nT E S T   >>  Stock Situation\n");
+
 		con.readProducts("products.txt");
 
 		ArrayList<Product> allProds = con.stockSituation();
