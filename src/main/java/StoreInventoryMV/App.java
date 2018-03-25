@@ -12,7 +12,6 @@ public class App {
 	 * @throws IOException
 	 */
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
 
 //		Product p=new Product();
 		//p.read();

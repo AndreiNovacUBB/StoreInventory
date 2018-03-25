@@ -10,34 +10,20 @@ public class StoreController {
 
 	private StoreRepository io = new StoreRepository();
 
-	public void readProducts(String f) {
-		try {
-			io.readFile(f);
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public void readProducts(String fileName) throws IOException {
+		io.readFile(fileName);
 	}
 
-	public void addProduct(Product p) {
-		try {
-			io.addNewProduct(p);
-		} catch (NumberFormatException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+	public void addProduct(Product product) throws IOException {
+		io.addNewProduct(product);
 	}
 
-	public ArrayList<Product> getProductsCategory(String cat) {
-		return io.getProductsCategory(cat);
+	public ArrayList<Product> getProductsCategory(String category) {
+		return io.getProductsCategory(category);
 	}
 
-	public ArrayList<Product> stockSituationProduct(String pname) {
-		return io.stockSituationProduct(pname);
+	public ArrayList<Product> stockSituationProduct(String productName) {
+		return io.stockSituationProduct(productName);
 	}
 
 	public ArrayList<Product> stockSituation() {
