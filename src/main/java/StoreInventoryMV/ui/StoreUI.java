@@ -24,7 +24,7 @@ public class StoreUI {
 		String menu;
 		menu = ">> Welcome to the Store Inventory <<\n";
 		menu += "\t 1 - Add a new Product \n";
-		menu += "\t 2 - Displays all products from category\n";
+		menu += "\t 2 - Displays all products from given category\n";
 		menu += "\t 3 - Stock situation for all products \n";
 		menu += "\t 4 - Stock situation for a certain product \n";
 		menu += "\t 0 - Exit \n";

@@ -61,14 +61,18 @@ public class StoreRepository {
 		return false;
 	}
 
-	public ArrayList<Product> getProductsCategory(String cat) {
-		ArrayList<Product> cProducts = new ArrayList<Product>();
+	// WBT - Lab 3
+	public ArrayList<Product> getProductsCategory(String category) {
+		ArrayList<Product> foundProducts = new ArrayList<Product>();
 		for (Product p : allProducts) {
-			if (p.getCategory().compareTo(cat) == 0) {
-				cProducts.add(p);
+			if (p.getCategory().compareTo(category) == 0) {
+				foundProducts.add(p);
 			}
 		}
-		return cProducts;
+		if (foundProducts.size() == 0)
+			System.out.println("There is no product in the '" + category + "' category!");
+
+		return foundProducts;
 	}
 
 	public ArrayList<Product> stockSituationProduct(String pname) {

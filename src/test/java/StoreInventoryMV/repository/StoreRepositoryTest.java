@@ -38,9 +38,14 @@ public class StoreRepositoryTest extends TestCase {
 		StoreController con = new StoreController();
 		assertEquals(0, con.stockSituation().size());
 		Product product = new Product(12345, "Samsung", "Telefon", 21);
+
+		System.out.println((product.getCode() == 12345));
 		assert (product.getCode() == 12345);
+		System.out.println(product.getName().equals("Samsung"));
 		assert (product.getName().equals("Samsung"));
+		System.out.println(product.getCategory().equals("Telefon"));
 		assert (product.getCategory().equals("Telefon"));
+		System.out.println(product.getQuantity() == 21);
 		assert (product.getQuantity() == 21);
 //		con.addProduct(product);
 //		assertEquals(1, con.stockSituation().size());
@@ -104,7 +109,7 @@ public class StoreRepositoryTest extends TestCase {
 			System.out.println(p.toString());
 		}
 		System.out.println("\n");
-		System.out.println("Nr of products: " + 6 + ", "  + allProds.size());
+		System.out.println("Nr of products: " + 6 + ", " + allProds.size());
 		assertEquals(6, allProds.size());
 	}
 }
